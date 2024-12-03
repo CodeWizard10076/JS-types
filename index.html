@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="1">
+    <input type="number" name="" id="2">
+    <input type="button" value="+" id="+" onclick="resultplas()">
+    <input type="button" value="*" id="*" onclick="resultmul()">
+    <input type="button" value="^" id="^" onclick="resultpower()">
+    <input type="button" value="+b" id="b" onclick="resultplasbin()">
+
+    <br>
+    <br>
+    <input type="text" name="" id="name">
+    <input type="text" name="" id="pass">
+    <input type="button" value="save" onclick="save()">
+
+
+
+
+
+    <script>
+        function resultplas() {
+            num1= document.getElementById("1").value
+            num2=document.getElementById("2").value
+            alert(+num1+(+num2))
+        }
+        function resultmul() {
+            num1=document.getElementById("1").value
+            num2=document.getElementById("2").value
+            alert(num1*num2)
+        }
+        function resultpower() {
+            num1=document.getElementById("1").value
+            num2=document.getElementById("2").value
+            alert(num1**num2)
+        }
+        function resultplasbin() {
+            num1=parseInt(document.getElementById("1").value,2)
+            num2=parseInt( document.getElementById("2").value,2)
+            alert((num1+num2).toString(2))
+        }
+        function save() {
+            let name=document.getElementById("name").value||"guest"
+            let pass=document.getElementById("pass").value||"0000"
+            alert("Hello "+name+" your password is: "+pass)
+
+        }
+    </script>
+</body>
+</html>
