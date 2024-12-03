@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
-<body>
+
+<body >
     <input type="number" name="" id="1">
     <input type="number" name="" id="2">
     <input type="button" value="+" id="+" onclick="resultplas()">
@@ -20,37 +23,52 @@
     <input type="text" name="" id="pass">
     <input type="button" value="save" onclick="save()">
 
+    <p id="print"></p>
+    <label for="price">change price</label>
+    <input type="text" name="" id="price">
+    <input type="button" value="do" id="do" onclick="doit()"><br><br>
+    <label for="calo">delet by calories</label>
+    <input type="text" id="calo" onblur="doit2()"><br><br>
+
+    <select name="" id="se" >
+        <option value="infomation">infomation</option>
+        <option value="warrning">warrning</option>
+        <option value="error">error</option>
+    </select>
+    <input type="text" name="" id="tytle">
+    <textarea name="" id="thetext" cols="30" rows="10"></textarea>
+    <input type="button" value="OK" onclick="makeMassage()">
 
 
-
-
-    <script>
+    <script src="JSobjects.js">
         function resultplas() {
-            num1= document.getElementById("1").value
-            num2=document.getElementById("2").value
-            alert(+num1+(+num2))
+            num1 = document.getElementById("1").value
+            num2 = document.getElementById("2").value
+            alert(+num1 + (+num2))
         }
         function resultmul() {
-            num1=document.getElementById("1").value
-            num2=document.getElementById("2").value
-            alert(num1*num2)
+            num1 = document.getElementById("1").value
+            num2 = document.getElementById("2").value
+            alert(num1 * num2)
         }
         function resultpower() {
-            num1=document.getElementById("1").value
-            num2=document.getElementById("2").value
-            alert(num1**num2)
+            num1 = document.getElementById("1").value
+            num2 = document.getElementById("2").value
+            alert(num1 ** num2)
         }
         function resultplasbin() {
-            num1=parseInt(document.getElementById("1").value,2)
-            num2=parseInt( document.getElementById("2").value,2)
-            alert((num1+num2).toString(2))
+            num1 = parseInt(document.getElementById("1").value, 2)
+            num2 = parseInt(document.getElementById("2").value, 2)
+            alert((num1 + num2).toString(2))
         }
         function save() {
-            let name=document.getElementById("name").value||"guest"
-            let pass=document.getElementById("pass").value||"0000"
-            alert("Hello "+name+" your password is: "+pass)
-
+            let name = document.getElementById("name").value || "guest"
+            let pass = document.getElementById("pass").value || "0000"
+            alert("Hello " + name + " your password is: " + pass)
         }
+
+
     </script>
 </body>
+
 </html>
